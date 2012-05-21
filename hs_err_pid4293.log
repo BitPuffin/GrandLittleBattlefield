@@ -1,0 +1,466 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f62aafa5db8, pid=4293, tid=140061953263360
+#
+# JRE version: 6.0_22-b22
+# Java VM: OpenJDK 64-Bit Server VM (19.0-b09 mixed mode linux-amd64 compressed oops)
+# Derivative: IcedTea6 1.10.4
+# Distribution: Custom build (Mon Jan  2 01:10:45 UTC 2012)
+# Problematic frame:
+# C  [libX11.so.6+0x39db8]  XQueryExtension+0x28
+#
+# If you would like to submit a bug report, please include
+# instructions how to reproduce the bug and visit:
+#   http://icedtea.classpath.org/bugzilla
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0xffffffffac14a848
+
+Registers:
+RAX=0x0000000000b8b840, RBX=0xffffffffac149ee0, RCX=0x00007fffd99a9598, RDX=0x00007fffd99a9594
+RSP=0x00007fffd99a9530, RBP=0x00007f62a8937932, RSI=0x00007f62a8937932, RDI=0xffffffffac149ee0
+R8 =0x00007fffd99a959c, R9 =0x0000000000000000, R10=0x00007f62b652c9a8, R11=0x00007f62b61df7d0
+R12=0x00007fffd99a9594, R13=0x0000000000b8b840, R14=0x0000000000b8b840, R15=0x0000000000000000
+RIP=0x00007f62aafa5db8, EFL=0x0000000000010206, CSGSFS=0x0000000000000033, ERR=0x0000000000000005
+  TRAPNO=0x000000000000000e
+
+Register to memory mapping:
+
+RAX=0x0000000000b8b840
+0x0000000000b8b840 is pointing to unknown location
+
+RBX=0xffffffffac149ee0
+0xffffffffac149ee0 is pointing to unknown location
+
+RCX=0x00007fffd99a9598
+0x00007fffd99a9598 is pointing to unknown location
+
+RDX=0x00007fffd99a9594
+0x00007fffd99a9594 is pointing to unknown location
+
+RSP=0x00007fffd99a9530
+0x00007fffd99a9530 is pointing to unknown location
+
+RBP=0x00007f62a8937932
+0x00007f62a8937932: <offset 0x96932> in /usr/lib/libGL.so.1 at 0x00007f62a88a1000
+
+RSI=0x00007f62a8937932
+0x00007f62a8937932: <offset 0x96932> in /usr/lib/libGL.so.1 at 0x00007f62a88a1000
+
+RDI=0xffffffffac149ee0
+0xffffffffac149ee0 is pointing to unknown location
+
+R8 =0x00007fffd99a959c
+0x00007fffd99a959c is pointing to unknown location
+
+R9 =0x0000000000000000
+0x0000000000000000 is pointing to unknown location
+
+R10=0x00007f62b652c9a8
+0x00007f62b652c9a8: <offset 0x3849a8> in /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/lib/libc.so.6 at 0x00007f62b61a8000
+
+R11=0x00007f62b61df7d0
+0x00007f62b61df7d0: __cxa_finalize+0 in /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/lib/libc.so.6 at 0x00007f62b61a8000
+
+R12=0x00007fffd99a9594
+0x00007fffd99a9594 is pointing to unknown location
+
+R13=0x0000000000b8b840
+0x0000000000b8b840 is pointing to unknown location
+
+R14=0x0000000000b8b840
+0x0000000000b8b840 is pointing to unknown location
+
+R15=0x0000000000000000
+0x0000000000000000 is pointing to unknown location
+
+
+Top of Stack: (sp=0x00007fffd99a9530)
+0x00007fffd99a9530:   00007f62b61b66a8 00007f62b6f8a000
+0x00007fffd99a9540:   00000000b12fe117 00007f62b6d75af1
+0x00007fffd99a9550:   0000000000000000 ffffffffac149ee0
+0x00007fffd99a9560:   00007f62a8937932 0000000000000000
+0x00007fffd99a9570:   0000000000b8b840 0000000000b8b840
+0x00007fffd99a9580:   0000000000000000 00007f62aaf99765
+0x00007fffd99a9590:   0000000000000000 00007f62a8a70520
+0x00007fffd99a95a0:   00007f62a8a70520 ffffffffac149ee0
+0x00007fffd99a95b0:   0000000000000011 00007f62ab2b5db2
+0x00007fffd99a95c0:   00007fffd99a9660 00007f62b6d79c85
+0x00007fffd99a95d0:   00007f62ac14b410 00007f62a8937932
+0x00007fffd99a95e0:   00007f62ac134570 0000000000000000
+0x00007fffd99a95f0:   00007fffd99a9660 ffffffffac149ee0
+0x00007fffd99a9600:   00007fffd99a9758 00007fffd99a97d8
+0x00007fffd99a9610:   00007f62a8a89d50 00007f62a88de119
+0x00007fffd99a9620:   0000000000000000 00007f62ac14b5f0
+0x00007fffd99a9630:   00007fffd99a9660 00007f62b4854d48
+0x00007fffd99a9640:   00007fffd99a9758 00007fffd99a97d8
+0x00007fffd99a9650:   00000000ffffffff 00007f62a88d4b42
+0x00007fffd99a9660:   00007fffd99a9850 00007f62a89378b1
+0x00007fffd99a9670:   00007fffd99a9850 00007f62b6d7ae8f
+0x00007fffd99a9680:   00007f62b6f8f188 00007f62b6f8f718
+0x00007fffd99a9690:   00007f62b6f8b540 0000000000b902d0
+0x00007fffd99a96a0:   0000000000b93250 0000000000b97a70
+0x00007fffd99a96b0:   00007f62ac09a6c0 00007f62ac09abc0
+0x00007fffd99a96c0:   00007f62b6f8ca58 00007f62ac09b070
+0x00007fffd99a96d0:   00007f62ac133bf0 00007f62ac12a570
+0x00007fffd99a96e0:   00007f62ac1233a0 00007f62ac123840
+0x00007fffd99a96f0:   00007f62ac045510 00007f62ac052110
+0x00007fffd99a9700:   00007f62ac03fbe0 00007f62ac03e150
+0x00007fffd99a9710:   0000000000b8ef50 0000000000b8f580
+0x00007fffd99a9720:   0000000000b8e810 0000000000b89860 
+
+Instructions: (pc=0x00007f62aafa5db8)
+0x00007f62aafa5da8:   89 d4 4c 89 74 24 f0 4c 89 7c 24 f8 48 83 ec 58
+0x00007f62aafa5db8:   48 8b 87 68 09 00 00 49 89 f5 48 89 cd 4d 89 c6 
+
+Stack: [0x00007fffd98ac000,0x00007fffd99ac000],  sp=0x00007fffd99a9530,  free space=1013k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libX11.so.6+0x39db8]  XQueryExtension+0x28
+
+
+---------------  P R O C E S S  ---------------
+
+VM state:at safepoint (shutting down)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000000000b918a0] Threads_lock - owner thread: 0x0000000000bf7000
+
+Heap
+ PSYoungGen      total 18496K, used 11452K [0x00000000eb600000, 0x00000000ecaa0000, 0x0000000100000000)
+  eden space 15872K, 72% used [0x00000000eb600000,0x00000000ec12f2d0,0x00000000ec580000)
+  from space 2624K, 0% used [0x00000000ec810000,0x00000000ec810000,0x00000000ecaa0000)
+  to   space 2624K, 0% used [0x00000000ec580000,0x00000000ec580000,0x00000000ec810000)
+ PSOldGen        total 42240K, used 0K [0x00000000c2200000, 0x00000000c4b40000, 0x00000000eb600000)
+  object space 42240K, 0% used [0x00000000c2200000,0x00000000c2200000,0x00000000c4b40000)
+ PSPermGen       total 21248K, used 10201K [0x00000000b7c00000, 0x00000000b90c0000, 0x00000000c2200000)
+  object space 21248K, 48% used [0x00000000b7c00000,0x00000000b85f6568,0x00000000b90c0000)
+
+Dynamic libraries:
+00400000-00408000 r-xp 00000000 07:01 5263                               /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/bin/java
+00608000-00609000 rw-p 00008000 07:01 5263                               /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/bin/java
+00b89000-01182000 rw-p 00000000 00:00 0                                  [heap]
+b7c00000-b90c0000 rw-p 00000000 00:00 0 
+b90c0000-c2200000 rw-p 00000000 00:00 0 
+c2200000-c4b40000 rw-p 00000000 00:00 0 
+c4b40000-eb600000 rw-p 00000000 00:00 0 
+eb600000-ecaa0000 rw-p 00000000 00:00 0 
+ecaa0000-100000000 rw-p 00000000 00:00 0 
+7f62a5980000-7f62a59c8000 rw-p 00000000 00:00 0 
+7f62a59c8000-7f62a60c8000 rw-s 00006000 00:05 10457                      /dev/ati/card0
+7f62a60c8000-7f62a6145000 rw-p 00000000 00:00 0 
+7f62a6145000-7f62a6147000 r-xp 00000000 08:06 5774538                    /usr/lib/libXinerama.so.1.0.0
+7f62a6147000-7f62a6346000 ---p 00002000 08:06 5774538                    /usr/lib/libXinerama.so.1.0.0
+7f62a6346000-7f62a6347000 rw-p 00001000 08:06 5774538                    /usr/lib/libXinerama.so.1.0.0
+7f62a6347000-7f62a6382000 r-xp 00000000 08:06 5769939                    /usr/lib/libatiadlxx.so
+7f62a6382000-7f62a6482000 ---p 0003b000 08:06 5769939                    /usr/lib/libatiadlxx.so
+7f62a6482000-7f62a648b000 rw-p 0003b000 08:06 5769939                    /usr/lib/libatiadlxx.so
+7f62a648b000-7f62a649c000 rw-p 00000000 00:00 0 
+7f62a64ca000-7f62a64d1000 r-xp 00000000 08:06 5769938                    /usr/lib/libatiuki.so.1.0
+7f62a64d1000-7f62a65d1000 ---p 00007000 08:06 5769938                    /usr/lib/libatiuki.so.1.0
+7f62a65d1000-7f62a65d2000 rw-p 00007000 08:06 5769938                    /usr/lib/libatiuki.so.1.0
+7f62a65d2000-7f62a65d3000 rw-p 00000000 00:00 0 
+7f62a65d3000-7f62a852d000 r-xp 00000000 08:06 400255                     /usr/lib/xorg/modules/dri/fglrx_dri.so
+7f62a852d000-7f62a862d000 ---p 01f5a000 08:06 400255                     /usr/lib/xorg/modules/dri/fglrx_dri.so
+7f62a862d000-7f62a877b000 rwxp 01f5a000 08:06 400255                     /usr/lib/xorg/modules/dri/fglrx_dri.so
+7f62a877b000-7f62a88a1000 rwxp 00000000 00:00 0 
+7f62a88a1000-7f62a8964000 r-xp 00000000 08:06 5770805                    /usr/lib/fglrx/fglrx-libGL.so.1.2
+7f62a8964000-7f62a8a63000 ---p 000c3000 08:06 5770805                    /usr/lib/fglrx/fglrx-libGL.so.1.2
+7f62a8a63000-7f62a8a8a000 rwxp 000c2000 08:06 5770805                    /usr/lib/fglrx/fglrx-libGL.so.1.2
+7f62a8a8a000-7f62a8aaa000 rwxp 00000000 00:00 0 
+7f62a8aaa000-7f62a8aad000 ---p 00000000 00:00 0 
+7f62a8aad000-7f62a8bab000 rw-p 00000000 00:00 0 
+7f62a8bab000-7f62a8bb0000 r-xp 00000000 08:06 5774582                    /usr/lib/libXxf86vm.so.1.0.0
+7f62a8bb0000-7f62a8daf000 ---p 00005000 08:06 5774582                    /usr/lib/libXxf86vm.so.1.0.0
+7f62a8daf000-7f62a8db0000 rw-p 00004000 08:06 5774582                    /usr/lib/libXxf86vm.so.1.0.0
+7f62a8db0000-7f62a8db8000 r-xp 00000000 08:06 5774551                    /usr/lib/libXrandr.so.2.2.0
+7f62a8db8000-7f62a8fb7000 ---p 00008000 08:06 5774551                    /usr/lib/libXrandr.so.2.2.0
+7f62a8fb7000-7f62a8fb8000 rw-p 00007000 08:06 5774551                    /usr/lib/libXrandr.so.2.2.0
+7f62a8fb8000-7f62a901f000 r-xp 00000000 08:05 1574238                    /home/isak/workspace/GrandLittleBattlefield/lib/native/liblwjgl64.so
+7f62a901f000-7f62a921f000 ---p 00067000 08:05 1574238                    /home/isak/workspace/GrandLittleBattlefield/lib/native/liblwjgl64.so
+7f62a921f000-7f62a9221000 r--p 00067000 08:05 1574238                    /home/isak/workspace/GrandLittleBattlefield/lib/native/liblwjgl64.so
+7f62a9221000-7f62a9222000 rw-p 00069000 08:05 1574238                    /home/isak/workspace/GrandLittleBattlefield/lib/native/liblwjgl64.so
+7f62a9222000-7f62a9223000 r-xp 00000000 07:01 5577                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/libjawt.so
+7f62a9223000-7f62a9422000 ---p 00001000 07:01 5577                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/libjawt.so
+7f62a9422000-7f62a9423000 rw-p 00000000 07:01 5577                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/libjawt.so
+7f62a9423000-7f62a9428000 r-xp 00000000 08:06 5774522                    /usr/lib/libXfixes.so.3.1.0
+7f62a9428000-7f62a9628000 ---p 00005000 08:06 5774522                    /usr/lib/libXfixes.so.3.1.0
+7f62a9628000-7f62a9629000 rw-p 00005000 08:06 5774522                    /usr/lib/libXfixes.so.3.1.0
+7f62a9629000-7f62a962b000 r--s 00000000 08:06 4849672                    /var/cache/fontconfig/699564f050ff7e0f9dae359f33bc56a5-le64.cache-3
+7f62a962b000-7f62a962c000 r--s 00000000 08:06 4850731                    /var/cache/fontconfig/e4e854e19093b3a10d48c1d28c821416-le64.cache-3
+7f62a962c000-7f62a9642000 r--s 00000000 08:06 4851514                    /var/cache/fontconfig/8d4af663993b81a124ee82e610bb31f9-le64.cache-3
+7f62a9642000-7f62a964a000 r--s 00000000 08:06 4849675                    /var/cache/fontconfig/a98d8961fa319a64d3cfd8640c79e62d-le64.cache-3
+7f62a964a000-7f62a9653000 r--s 00000000 08:06 4851502                    /var/cache/fontconfig/d62e99ef547d1d24cdb1bd22ec1a2976-le64.cache-3
+7f62a9653000-7f62a9684000 r--s 00000000 08:06 4851501                    /var/cache/fontconfig/f6b893a7224233d96cb72fd88691c0b4-le64.cache-3
+7f62a9684000-7f62a96e1000 r--s 00000000 08:06 4851500                    /var/cache/fontconfig/17090aa38d5c6f09fb8c5c354938f1d7-le64.cache-3
+7f62a96f0000-7f62a96f3000 ---p 00000000 00:00 0 
+7f62a96f3000-7f62a97f1000 rw-p 00000000 00:00 0 
+7f62a97f1000-7f62a9822000 r--s 00000000 08:06 4851501                    /var/cache/fontconfig/f6b893a7224233d96cb72fd88691c0b4-le64.cache-3
+7f62a9822000-7f62a987f000 r--s 00000000 08:06 4851500                    /var/cache/fontconfig/17090aa38d5c6f09fb8c5c354938f1d7-le64.cache-3
+7f62a987f000-7f62a98dc000 r--s 00000000 08:06 4851498                    /var/cache/fontconfig/df311e82a1a24c41a75c2c930223552e-le64.cache-3
+7f62a98ea000-7f62a98f3000 r-xp 00000000 08:06 5774510                    /usr/lib/libXcursor.so.1.0.2
+7f62a98f3000-7f62a9af3000 ---p 00009000 08:06 5774510                    /usr/lib/libXcursor.so.1.0.2
+7f62a9af3000-7f62a9af4000 rw-p 00009000 08:06 5774510                    /usr/lib/libXcursor.so.1.0.2
+7f62a9b12000-7f62a9b22000 rw-s f5000000 00:05 10457                      /dev/ati/card0
+7f62a9b22000-7f62a9b29000 r--s 000fb000 07:01 5609                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/resources.jar
+7f62a9b29000-7f62a9b3f000 r--s 00000000 08:06 4851514                    /var/cache/fontconfig/8d4af663993b81a124ee82e610bb31f9-le64.cache-3
+7f62a9b3f000-7f62a9b42000 ---p 00000000 00:00 0 
+7f62a9b42000-7f62a9c40000 rw-p 00000000 00:00 0 
+7f62a9c40000-7f62a9c4f000 r-xp 00000000 08:06 2884484                    /lib/libbz2.so.1.0.6
+7f62a9c4f000-7f62a9e4e000 ---p 0000f000 08:06 2884484                    /lib/libbz2.so.1.0.6
+7f62a9e4e000-7f62a9e50000 rw-p 0000e000 08:06 2884484                    /lib/libbz2.so.1.0.6
+7f62a9e50000-7f62a9ee7000 r-xp 00000000 07:01 5132                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libfreetype.so.6.7.2
+7f62a9ee7000-7f62aa0e6000 ---p 00097000 07:01 5132                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libfreetype.so.6.7.2
+7f62aa0e6000-7f62aa0ec000 rw-p 00096000 07:01 5132                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libfreetype.so.6.7.2
+7f62aa0ec000-7f62aa125000 r-xp 00000000 07:01 5583                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/libfontmanager.so
+7f62aa125000-7f62aa325000 ---p 00039000 07:01 5583                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/libfontmanager.so
+7f62aa325000-7f62aa327000 rw-p 00039000 07:01 5583                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/libfontmanager.so
+7f62aa327000-7f62aa328000 rw-p 00000000 00:00 0 
+7f62aa328000-7f62aa32d000 r-xp 00000000 08:06 5774516                    /usr/lib/libXdmcp.so.6.0.0
+7f62aa32d000-7f62aa52c000 ---p 00005000 08:06 5774516                    /usr/lib/libXdmcp.so.6.0.0
+7f62aa52c000-7f62aa52d000 rw-p 00004000 08:06 5774516                    /usr/lib/libXdmcp.so.6.0.0
+7f62aa52d000-7f62aa52f000 r-xp 00000000 08:06 5774495                    /usr/lib/libXau.so.6.0.0
+7f62aa52f000-7f62aa72e000 ---p 00002000 08:06 5774495                    /usr/lib/libXau.so.6.0.0
+7f62aa72e000-7f62aa72f000 rw-p 00001000 08:06 5774495                    /usr/lib/libXau.so.6.0.0
+7f62aa72f000-7f62aa74c000 r-xp 00000000 08:06 5777297                    /usr/lib/libxcb.so.1.1.0
+7f62aa74c000-7f62aa94c000 ---p 0001d000 08:06 5777297                    /usr/lib/libxcb.so.1.1.0
+7f62aa94c000-7f62aa94d000 rw-p 0001d000 08:06 5777297                    /usr/lib/libxcb.so.1.1.0
+7f62aa94d000-7f62aa95b000 r-xp 00000000 07:01 6320                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libXi.so.6.1.0
+7f62aa95b000-7f62aab5b000 ---p 0000e000 07:01 6320                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libXi.so.6.1.0
+7f62aab5b000-7f62aab5c000 rw-p 0000e000 07:01 6320                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libXi.so.6.1.0
+7f62aab5c000-7f62aab61000 r-xp 00000000 07:01 5026                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libXtst.so.6.1.0
+7f62aab61000-7f62aad61000 ---p 00005000 07:01 5026                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libXtst.so.6.1.0
+7f62aad61000-7f62aad62000 rw-p 00005000 07:01 5026                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libXtst.so.6.1.0
+7f62aad62000-7f62aad6b000 r-xp 00000000 07:01 6610                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libXrender.so.1.3.0
+7f62aad6b000-7f62aaf6b000 ---p 00009000 07:01 6610                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libXrender.so.1.3.0
+7f62aaf6b000-7f62aaf6c000 rw-p 00009000 07:01 6610                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libXrender.so.1.3.0
+7f62aaf6c000-7f62ab0a2000 r-xp 00000000 07:01 5008                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libX11.so.6.3.0
+7f62ab0a2000-7f62ab2a2000 ---p 00136000 07:01 5008                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libX11.so.6.3.0
+7f62ab2a2000-7f62ab2a8000 rw-p 00136000 07:01 5008                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libX11.so.6.3.0
+7f62ab2a8000-7f62ab2b9000 r-xp 00000000 07:01 5064                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libXext.so.6.4.0
+7f62ab2b9000-7f62ab4b9000 ---p 00011000 07:01 5064                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libXext.so.6.4.0
+7f62ab4b9000-7f62ab4ba000 rw-p 00011000 07:01 5064                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libXext.so.6.4.0
+7f62ab4ba000-7f62ab506000 r-xp 00000000 07:01 5584                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/xawt/libmawt.so
+7f62ab506000-7f62ab706000 ---p 0004c000 07:01 5584                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/xawt/libmawt.so
+7f62ab706000-7f62ab709000 rw-p 0004c000 07:01 5584                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/xawt/libmawt.so
+7f62ab709000-7f62ab70b000 rw-p 00000000 00:00 0 
+7f62ab70b000-7f62ab7b7000 r-xp 00000000 07:01 5592                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/libawt.so
+7f62ab7b7000-7f62ab9b7000 ---p 000ac000 07:01 5592                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/libawt.so
+7f62ab9b7000-7f62ab9c3000 rw-p 000ac000 07:01 5592                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/libawt.so
+7f62ab9c3000-7f62ab9e7000 rw-p 00000000 00:00 0 
+7f62ab9e7000-7f62ab9ea000 r--s 0007d000 07:01 6098                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/jsse.jar
+7f62ab9ea000-7f62ab9f5000 r--s 00093000 08:05 1574234                    /home/isak/workspace/GrandLittleBattlefield/lib/slick.jar
+7f62ab9f5000-7f62aba01000 r--s 000d8000 08:05 1574232                    /home/isak/workspace/GrandLittleBattlefield/lib/lwjgl.jar
+7f62aba01000-7f62aba02000 r--s 00006000 08:05 1574231                    /home/isak/workspace/GrandLittleBattlefield/lib/artemis.jar
+7f62aba02000-7f62aba03000 ---p 00000000 00:00 0 
+7f62aba03000-7f62abb03000 rw-p 00000000 00:00 0 
+7f62abb03000-7f62abb06000 ---p 00000000 00:00 0 
+7f62abb06000-7f62abc04000 rw-p 00000000 00:00 0 
+7f62abc04000-7f62abc07000 ---p 00000000 00:00 0 
+7f62abc07000-7f62abd05000 rw-p 00000000 00:00 0 
+7f62abd05000-7f62ac000000 r--p 00000000 08:06 5906316                    /usr/lib/locale/locale-archive
+7f62ac000000-7f62acdbe000 rw-p 00000000 00:00 0 
+7f62acdbe000-7f62b0000000 ---p 00000000 00:00 0 
+7f62b0007000-7f62b000f000 r--s 00000000 08:06 4849675                    /var/cache/fontconfig/a98d8961fa319a64d3cfd8640c79e62d-le64.cache-3
+7f62b000f000-7f62b0018000 r--s 00000000 08:06 4851502                    /var/cache/fontconfig/d62e99ef547d1d24cdb1bd22ec1a2976-le64.cache-3
+7f62b0018000-7f62b0075000 r--s 00000000 08:06 4851498                    /var/cache/fontconfig/df311e82a1a24c41a75c2c930223552e-le64.cache-3
+7f62b0075000-7f62b0078000 ---p 00000000 00:00 0 
+7f62b0078000-7f62b0176000 rw-p 00000000 00:00 0 
+7f62b0176000-7f62b0179000 ---p 00000000 00:00 0 
+7f62b0179000-7f62b0277000 rw-p 00000000 00:00 0 
+7f62b0277000-7f62b027a000 ---p 00000000 00:00 0 
+7f62b027a000-7f62b0378000 rw-p 00000000 00:00 0 
+7f62b0378000-7f62b037b000 ---p 00000000 00:00 0 
+7f62b037b000-7f62b0479000 rw-p 00000000 00:00 0 
+7f62b0479000-7f62b047a000 ---p 00000000 00:00 0 
+7f62b047a000-7f62b08b0000 rw-p 00000000 00:00 0 
+7f62b08b0000-7f62b0a41000 r--s 037b1000 07:01 6063                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/rt.jar
+7f62b0a41000-7f62b0a42000 ---p 00000000 00:00 0 
+7f62b0a42000-7f62b0b42000 rw-p 00000000 00:00 0 
+7f62b0b42000-7f62b0b43000 ---p 00000000 00:00 0 
+7f62b0b43000-7f62b0c4e000 rw-p 00000000 00:00 0 
+7f62b0c4e000-7f62b0c96000 rw-p 00000000 00:00 0 
+7f62b0c96000-7f62b0cab000 rw-p 00000000 00:00 0 
+7f62b0cab000-7f62b0de0000 rw-p 00000000 00:00 0 
+7f62b0de0000-7f62b0deb000 rw-p 00000000 00:00 0 
+7f62b0deb000-7f62b0e33000 rw-p 00000000 00:00 0 
+7f62b0e33000-7f62b0e48000 rw-p 00000000 00:00 0 
+7f62b0e48000-7f62b0f7d000 rw-p 00000000 00:00 0 
+7f62b0f7d000-7f62b0f88000 rw-p 00000000 00:00 0 
+7f62b0f88000-7f62b1022000 rw-p 00000000 00:00 0 
+7f62b1022000-7f62b1023000 rw-p 00000000 00:00 0 
+7f62b1023000-7f62b1293000 rwxp 00000000 00:00 0 
+7f62b1293000-7f62b4023000 rw-p 00000000 00:00 0 
+7f62b4023000-7f62b402a000 r-xp 00000000 07:01 5571                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/libzip.so
+7f62b402a000-7f62b4229000 ---p 00007000 07:01 5571                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/libzip.so
+7f62b4229000-7f62b422a000 rw-p 00006000 07:01 5571                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/libzip.so
+7f62b422a000-7f62b4236000 r-xp 00000000 08:06 2884578                    /lib/libnss_files-2.15.so
+7f62b4236000-7f62b4435000 ---p 0000c000 08:06 2884578                    /lib/libnss_files-2.15.so
+7f62b4435000-7f62b4436000 r--p 0000b000 08:06 2884578                    /lib/libnss_files-2.15.so
+7f62b4436000-7f62b4437000 rw-p 0000c000 08:06 2884578                    /lib/libnss_files-2.15.so
+7f62b4437000-7f62b443f000 r-xp 00000000 07:01 5590                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/native_threads/libhpi.so
+7f62b443f000-7f62b463e000 ---p 00008000 07:01 5590                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/native_threads/libhpi.so
+7f62b463e000-7f62b4640000 rw-p 00007000 07:01 5590                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/native_threads/libhpi.so
+7f62b4640000-7f62b4655000 r-xp 00000000 08:06 2884532                    /lib/libnsl-2.15.so
+7f62b4655000-7f62b4854000 ---p 00015000 08:06 2884532                    /lib/libnsl-2.15.so
+7f62b4854000-7f62b4855000 r--p 00014000 08:06 2884532                    /lib/libnsl-2.15.so
+7f62b4855000-7f62b4856000 rw-p 00015000 08:06 2884532                    /lib/libnsl-2.15.so
+7f62b4856000-7f62b4858000 rw-p 00000000 00:00 0 
+7f62b4858000-7f62b4885000 r-xp 00000000 07:01 5602                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/libjava.so
+7f62b4885000-7f62b4a84000 ---p 0002d000 07:01 5602                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/libjava.so
+7f62b4a84000-7f62b4a88000 rw-p 0002c000 07:01 5602                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/libjava.so
+7f62b4a88000-7f62b4a96000 r-xp 00000000 07:01 5591                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/libverify.so
+7f62b4a96000-7f62b4c95000 ---p 0000e000 07:01 5591                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/libverify.so
+7f62b4c95000-7f62b4c97000 rw-p 0000d000 07:01 5591                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/libverify.so
+7f62b4c97000-7f62b4c9e000 r-xp 00000000 08:06 2884540                    /lib/librt-2.15.so
+7f62b4c9e000-7f62b4e9d000 ---p 00007000 08:06 2884540                    /lib/librt-2.15.so
+7f62b4e9d000-7f62b4e9e000 r--p 00006000 08:06 2884540                    /lib/librt-2.15.so
+7f62b4e9e000-7f62b4e9f000 rw-p 00007000 08:06 2884540                    /lib/librt-2.15.so
+7f62b4e9f000-7f62b4eb4000 r-xp 00000000 07:01 6295                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libgcc_s.so.1
+7f62b4eb4000-7f62b50b4000 ---p 00015000 07:01 6295                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libgcc_s.so.1
+7f62b50b4000-7f62b50b5000 rw-p 00015000 07:01 6295                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libgcc_s.so.1
+7f62b50b5000-7f62b51a8000 r-xp 00000000 08:06 2884467                    /lib/libm-2.15.so
+7f62b51a8000-7f62b53a8000 ---p 000f3000 08:06 2884467                    /lib/libm-2.15.so
+7f62b53a8000-7f62b53a9000 r--p 000f3000 08:06 2884467                    /lib/libm-2.15.so
+7f62b53a9000-7f62b53aa000 rw-p 000f4000 08:06 2884467                    /lib/libm-2.15.so
+7f62b53aa000-7f62b5495000 r-xp 00000000 07:01 5129                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libstdc++.so.6.0.16
+7f62b5495000-7f62b5695000 ---p 000eb000 07:01 5129                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libstdc++.so.6.0.16
+7f62b5695000-7f62b569d000 r--p 000eb000 07:01 5129                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libstdc++.so.6.0.16
+7f62b569d000-7f62b569f000 rw-p 000f3000 07:01 5129                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libstdc++.so.6.0.16
+7f62b569f000-7f62b56b4000 rw-p 00000000 00:00 0 
+7f62b56b4000-7f62b5ef2000 r-xp 00000000 07:01 5587                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/server/libjvm.so
+7f62b5ef2000-7f62b60f1000 ---p 0083e000 07:01 5587                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/server/libjvm.so
+7f62b60f1000-7f62b6180000 rw-p 0083d000 07:01 5587                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/server/libjvm.so
+7f62b6180000-7f62b61a8000 rw-p 00000000 00:00 0 
+7f62b61a8000-7f62b6326000 r-xp 00000000 07:01 6632                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/lib/libc.so.6
+7f62b6326000-7f62b6525000 ---p 0017e000 07:01 6632                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/lib/libc.so.6
+7f62b6525000-7f62b6529000 r--p 0017d000 07:01 6632                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/lib/libc.so.6
+7f62b6529000-7f62b652a000 rw-p 00181000 07:01 6632                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/lib/libc.so.6
+7f62b652a000-7f62b652f000 rw-p 00000000 00:00 0 
+7f62b652f000-7f62b6531000 r-xp 00000000 07:01 6634                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/lib/libdl.so.2
+7f62b6531000-7f62b6731000 ---p 00002000 07:01 6634                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/lib/libdl.so.2
+7f62b6731000-7f62b6732000 r--p 00002000 07:01 6634                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/lib/libdl.so.2
+7f62b6732000-7f62b6733000 rw-p 00003000 07:01 6634                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/lib/libdl.so.2
+7f62b6733000-7f62b6737000 r-xp 00000000 07:01 5594                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/jli/libjli.so
+7f62b6737000-7f62b6936000 ---p 00004000 07:01 5594                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/jli/libjli.so
+7f62b6936000-7f62b6937000 rw-p 00003000 07:01 5594                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/jli/libjli.so
+7f62b6937000-7f62b694e000 r-xp 00000000 07:01 6633                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/lib/libpthread.so.0
+7f62b694e000-7f62b6b4e000 ---p 00017000 07:01 6633                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/lib/libpthread.so.0
+7f62b6b4e000-7f62b6b4f000 r--p 00017000 07:01 6633                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/lib/libpthread.so.0
+7f62b6b4f000-7f62b6b50000 rw-p 00018000 07:01 6633                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/lib/libpthread.so.0
+7f62b6b50000-7f62b6b54000 rw-p 00000000 00:00 0 
+7f62b6b54000-7f62b6b6c000 r-xp 00000000 07:01 6114                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libz.so.1.2.5
+7f62b6b6c000-7f62b6d6b000 ---p 00018000 07:01 6114                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libz.so.1.2.5
+7f62b6d6b000-7f62b6d6c000 rw-p 00017000 07:01 6114                       /tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/libz.so.1.2.5
+7f62b6d6c000-7f62b6d8d000 r-xp 00000000 08:06 2884542                    /lib/ld-2.15.so
+7f62b6d8e000-7f62b6d8f000 rw-s 00005000 00:05 10457                      /dev/ati/card0
+7f62b6d8f000-7f62b6d91000 rw-s 00002000 00:05 10457                      /dev/ati/card0
+7f62b6d91000-7f62b6d93000 r--s 00000000 08:06 4849672                    /var/cache/fontconfig/699564f050ff7e0f9dae359f33bc56a5-le64.cache-3
+7f62b6d93000-7f62b6d94000 r--s 00000000 08:06 4850731                    /var/cache/fontconfig/e4e854e19093b3a10d48c1d28c821416-le64.cache-3
+7f62b6d94000-7f62b6dc6000 rw-p 00000000 00:00 0 
+7f62b6dc6000-7f62b6e7c000 rw-p 00000000 00:00 0 
+7f62b6e7c000-7f62b6e84000 rw-s 00000000 08:06 3276821                    /tmp/hsperfdata_isak/4293 (deleted)
+7f62b6e84000-7f62b6e85000 rw-p 00000000 00:00 0 
+7f62b6e85000-7f62b6e86000 ---p 00000000 00:00 0 
+7f62b6e86000-7f62b6e89000 ---p 00000000 00:00 0 
+7f62b6e89000-7f62b6f8d000 rw-p 00000000 00:00 0 
+7f62b6f8d000-7f62b6f8e000 r--p 00021000 08:06 2884542                    /lib/ld-2.15.so
+7f62b6f8e000-7f62b6f8f000 rw-p 00022000 08:06 2884542                    /lib/ld-2.15.so
+7f62b6f8f000-7f62b6f90000 rw-p 00000000 00:00 0 
+7fffd998b000-7fffd99ac000 rw-p 00000000 00:00 0                          [stack]
+7fffd99ff000-7fffd9a00000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Djava.library.path=/home/isak/workspace/GrandLittleBattlefield/lib/native -Dfile.encoding=UTF-8 
+java_command: org.newdawn.slick.tests.AlphaMapTest
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/bin
+PATH=/tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/bin:/home/isak/.rvm/gems/ruby-1.9.3-p194/bin:/home/isak/.rvm/gems/ruby-1.9.3-p194@global/bin:/home/isak/.rvm/rubies/ruby-1.9.3-p194/bin:/home/isak/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/isak/.cinstall/launchers/:/usr/bin/core_perl
+LD_LIBRARY_PATH=/tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/server:/tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/lib/amd64:/tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib/jvm/java-6-openjdk/jre/../lib/amd64:/tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/usr/lib:/tmp/cinstall-1000/eclipse-3.7.2-1-x86_64/lib
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x6d9f90], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x6d9f90], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x59e3f0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x59e3f0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGXFSZ: [libjvm.so+0x59e3f0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x59e3f0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x59e580], sa_mask[0]=0x00000004, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x5a0e80], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: [libjvm.so+0x5a0e80], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTERM: [libjvm.so+0x5a0e80], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x5a0e80], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:"Chakra" "2012.04.14" ("Archimedes")
+uname:Linux 3.2-CHAKRA #1 SMP PREEMPT Tue Feb 28 14:55:18 UTC 2012 x86_64
+libc:glibc 2.14.1 NPTL 2.14.1 
+rlimit: STACK 8192k, CORE 0k, NPROC 31619, NOFILE 4096, AS infinity
+load average:0.24 0.22 0.23
+
+/proc/meminfo:
+MemTotal:        4052328 kB
+MemFree:          682872 kB
+Buffers:          116744 kB
+Cached:          1374024 kB
+SwapCached:          604 kB
+Active:          1956320 kB
+Inactive:        1058512 kB
+Active(anon):    1219500 kB
+Inactive(anon):   327212 kB
+Active(file):     736820 kB
+Inactive(file):   731300 kB
+Unevictable:         132 kB
+Mlocked:             132 kB
+SwapTotal:       3997692 kB
+SwapFree:        3993808 kB
+Dirty:               712 kB
+Writeback:             0 kB
+AnonPages:       1523700 kB
+Mapped:           262220 kB
+Shmem:             22648 kB
+Slab:             104428 kB
+SReclaimable:      71976 kB
+SUnreclaim:        32452 kB
+KernelStack:        3296 kB
+PageTables:        35736 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     6023856 kB
+Committed_AS:    3112136 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      105964 kB
+VmallocChunk:   34359626068 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:     1334144 kB
+DirectMap2M:     2859008 kB
+
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 6 model 23 stepping 6, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1
+
+Memory: 4k page, physical 4052328k(682872k free), swap 3997692k(3993808k free)
+
+vm_info: OpenJDK 64-Bit Server VM (19.0-b09) for linux-amd64 JRE (1.6.0_22-b22), built on Jan  2 2012 01:17:16 by "chakrapony" with gcc 4.6.2
+
+time: Mon May 21 21:27:31 2012
+elapsed time: 3 seconds
+
