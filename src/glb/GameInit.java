@@ -23,6 +23,7 @@ public class GameInit extends StateBasedGame {
 
 	public GameInit( String windowFackingCuntTitleDontDenyItICanPromiseThatItWillShowUpOnTheGameWindowUnlessItIsFullScreenSoThereYouHaveIt ) {
 		super( windowFackingCuntTitleDontDenyItICanPromiseThatItWillShowUpOnTheGameWindowUnlessItIsFullScreenSoThereYouHaveIt );
+		
 	}
 	
 	@Override
