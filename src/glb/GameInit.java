@@ -13,6 +13,14 @@ import org.newdawn.slick.state.StateBasedGame;
 
 public class GameInit extends StateBasedGame {
 	
+	//	Some basic fields required for the game
+	private static final String		title	= "Grand Little Battlefield";
+	
+	private static final int		width		= 800;
+	private static final int		height		= 600;
+	
+	private static final boolean	fscrn		= false;
+
 	public GameInit( String windowFackingCuntTitleDontDenyItICanPromiseThatItWillShowUpOnTheGameWindowUnlessItIsFullScreenSoThereYouHaveIt ) {
 		super( windowFackingCuntTitleDontDenyItICanPromiseThatItWillShowUpOnTheGameWindowUnlessItIsFullScreenSoThereYouHaveIt );
 	}
@@ -23,13 +31,11 @@ public class GameInit extends StateBasedGame {
 		addState( new War( 1, container ) );
 	}
 	
-	//	Some basic fields required for the game
-	private static final String		gameName	= "Grand Little Battlefield";
-	private static final int		width		= 800;
-	private static final int		height		= 600;
-	private static final boolean	fscrn		= false;
-	
 	public
 	static void main( String[] snuskhummerbiten ) throws SlickException {
+		AppGameContainer game = new AppGameContainer( new GameInit( title ));
+		game.setDisplayMode( width, height, fscrn );
+//		game.setShowFPS(false);
+		game.start();
 	}
 }
