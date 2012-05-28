@@ -4,19 +4,21 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
+import org.newdawn.slick.geom.GeomUtil.HitResult;
 import org.newdawn.slick.state.StateBasedGame;
 
 import it.marteEngine.World;
 
 public class War extends World {
 	
-	//	Common graphics stay in this class so they're only initalized once in the init method
-	Image sprite_soliderLeft;
-	Image sprite_soliderRight;
+	//	Initialize the ground sprite instead of every time a ground object is created
 	Image sprite_ground;
 	
+	private int maxPlayers = 1; 
+	private int playerCount = 0;
+	
 	private int playerInitialX = 400;
-	private int playerInitialY = 300;
+	private int playerInitialY = 100;
 	
 	private Player player;
 
@@ -32,9 +34,8 @@ public class War extends World {
 		
 		initGraphics();
 		addGround();
+		addPlayer();
 		
-		player = new Player( playerInitialX, playerInitialY, Race.LITTLE );		// TODO REMEMBER TO CHANGE THE Race.LITTLE SO THAT IT DEPENDS ON A STATE
-																	// (THE RACE CHOSED AT BOOT)
 	}
 	
 	//	Update the game logic
@@ -60,17 +61,34 @@ public class War extends World {
 	
 	private
 	void addGround() {
-		int xTiles = 250;
-		int yTiles = 200;
+		int xTilePos = 0;
+		int yTilePos = 300;
+		int xRows = 100;
+		int yRows = 2;
 		int tileWidth = sprite_ground.getWidth();
 		int tileHeight = sprite_ground.getHeight();
 		
-		for ( int y = 0; y < yTiles; y += tileHeight ) {
-			for( int x = 0; x < xTiles; x += tileWidth ) {
-				Ground newGround = new Ground( x, y, sprite_ground );
+		for( int yAdded = 0; yAdded < yRows; yAdded++ ) {
+			for ( int xAdded = 0; xAdded < xRows; xAdded++ ) {
+				Ground newGround = new Ground( xTilePos, yTilePos, sprite_ground );
 				add( newGround );
+				xTilePos += tileWidth;
 			}
+			yTilePos += tileHeight;
+			xTilePos = 0;
 		}
+	}
+	
+	private
+	void addPlayer() throws SlickException{
+		if ( playerCount >= maxPlayers ) {
+			System.out.println( "DON'T INITIALIZE PLAYER MORE THAN ONCE" );
+			System.exit( -1 );
+		}
+		
+		player = new Player( playerInitialX, playerInitialY );
+		add ( player );
+		
 	}
 
 }
